@@ -1,0 +1,450 @@
+[
+  {
+    "repair_id": "993",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "宁芜上行线:自信号机SL2起至芜湖东四场信号机SL6止",
+    "repair_time": "8:11-10:11"
+  },
+  {
+    "repair_id": "989",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东四场18:484号道岔",
+    "repair_time": "10:15-12:15"
+  },
+  {
+    "repair_id": "989",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东四场18:484号道岔",
+    "repair_time": "10:15-12:15"
+  },
+  {
+    "repair_id": "989",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东四场18:484号道岔",
+    "repair_time": "10:15-12:15"
+  },
+  {
+    "repair_id": "988",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场7:自信号机SL2起（包括515、513、523、521号道岔）至SⅤⅣ止",
+    "repair_time": "8:07-10:07"
+  },
+  {
+    "repair_id": "988",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场7:自信号机SL2起（包括515、513、523、521号道岔）至SⅤⅣ止",
+    "repair_time": "8:07-10:07"
+  },
+  {
+    "repair_id": "986",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场5:自信号机XL11起(包括569、501、507、511、517、519号道岔)起至信号机SⅤⅡ止",
+    "repair_time": "8:10-10:10"
+  },
+  {
+    "repair_id": "986",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场5:自信号机XL11起(包括569、501、507、511、517、519号道岔)起至信号机SⅤⅡ止",
+    "repair_time": "8:10-10:10"
+  },
+  {
+    "repair_id": "981",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场2，4,10:自信号机XⅣ7- XⅣ10起（包括464、466、458、422/424、426/428号道岔）至信号机D420止.自信号机XⅣ6起（包括456、414/416、418/420、432/434，436/438号道岔）至信号机D404止。自信号机D420起（包括430）至机待线1车档止。",
+    "repair_time": "7:30-8:30"
+  },
+  {
+    "repair_id": "981",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场1，3，9:自信号机TF7-TF10起（包括455、467、459、419/421、423/425号道岔）至信号机D415止.自信号机TF6起（包括457、411/413、415/417、429/431、433/435号道岔）至信号机D405止。自信号机D401起（包括427号道岔）至D415止。",
+    "repair_time": "7:30-8:00"
+  },
+  {
+    "repair_id": "981",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场2，4,10:自信号机XⅣ7- XⅣ10起（包括464、466、458、422/424、426/428号道岔）至信号机D420止.自信号机XⅣ6起（包括456、414/416、418/420、432/434，436/438号道岔）至信号机D404止。自信号机D420起（包括430）至机待线1车档止。",
+    "repair_time": "7:30-8:30"
+  },
+  {
+    "repair_id": "981",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场1，3，9:自信号机TF7-TF10起（包括455、467、459、419/421、423/425号道岔）至信号机D415止.自信号机TF6起（包括457、411/413、415/417、429/431、433/435号道岔）至信号机D405止。自信号机D401起（包括427号道岔）至D415止。",
+    "repair_time": "7:30-8:00"
+  },
+  {
+    "repair_id": "980",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场5，7,11:自信号机TF5起（包括461、437/439、441/443、403/405、407/409号道岔）至信号机D407止.自信号机TF1-TF4起（包括453、465、463、445/447、449/451号道岔）至信号机D413止。自信号机D403起（包括401号道岔）至D413止。",
+    "repair_time": "8:00-8:30"
+  },
+  {
+    "repair_id": "980",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场6,8,12:（自信号机XⅣ5起（包括460、440/442、444/446、406/408，410/412道岔）至信号机D406止.自信号机XⅣ1-XⅣ4起（包括468、470、462、448/450、452/454号道岔）至信号机D422止。：自信号机D418、D410起（包括404、402号道岔）机待线2车档止。",
+    "repair_time": "8:30-9:30"
+  },
+  {
+    "repair_id": "980",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场5，7,11:自信号机TF5起（包括461、437/439、441/443、403/405、407/409号道岔）至信号机D407止.自信号机TF1-TF4起（包括453、465、463、445/447、449/451号道岔）至信号机D413止。自信号机D403起（包括401号道岔）至D413止。",
+    "repair_time": "8:00-8:30"
+  },
+  {
+    "repair_id": "980",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东四场6,8,12:（自信号机XⅣ5起（包括460、440/442、444/446、406/408，410/412道岔）至信号机D406止.自信号机XⅣ1-XⅣ4起（包括468、470、462、448/450、452/454号道岔）至信号机D422止。：自信号机D418、D410起（包括404、402号道岔）机待线2车档止。",
+    "repair_time": "8:30-9:30"
+  },
+  {
+    "repair_id": "893",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东四场-裕溪口",
+    "repair_time": "8:10-10:10"
+  },
+  {
+    "repair_id": "893",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东四场-裕溪口",
+    "repair_time": "8:10-10:10"
+  },
+  {
+    "repair_id": "994",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "宁芜上行线:自芜湖东三场进站信号机(XB)起-塔桥站进站信号机S止",
+    "repair_time": "9:24-11:24"
+  },
+  {
+    "repair_id": "959",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥",
+    "repair_time": "9:30-11:30"
+  },
+  {
+    "repair_id": "959",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥",
+    "repair_time": "9:30-11:30"
+  },
+  {
+    "repair_id": "957",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "毛耳山:从毛耳山站Ⅱ道SB信号机至至安1线止。",
+    "repair_time": "9:30-11:30"
+  },
+  {
+    "repair_id": "957",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "毛耳山:从毛耳山站Ⅱ道SB信号机至至安1线止。",
+    "repair_time": "9:30-11:30"
+  },
+  {
+    "repair_id": "957",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "毛耳山:从毛耳山站Ⅱ道SB信号机至至安1线止。",
+    "repair_time": "9:30-11:30"
+  },
+  {
+    "repair_id": "2317",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥-芜东一场",
+    "repair_time": "10:35-12:35"
+  },
+  {
+    "repair_id": "2317",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥-芜东一场",
+    "repair_time": "10:35-12:35"
+  },
+  {
+    "repair_id": "2336",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东ZⅢ道:自信号机SZ8起至接车进路信号机XL23止",
+    "repair_time": "10:15-12:15"
+  },
+  {
+    "repair_id": "960",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东一场6，8:自信号机XⅠ4、XⅠ5起（包括126/128、130/132、148/150、152/154、156、158号道岔）至信号机D112止.8:自道岔162号起（包括160/162、164/166、118/120、122/124、112号道岔）至信号机D106止。",
+    "repair_time": "7:30-8:30"
+  },
+  {
+    "repair_id": "960",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东一场6，8:自信号机XⅠ4、XⅠ5起（包括126/128、130/132、148/150、152/154、156、158号道岔）至信号机D112止.8:自道岔162号起（包括160/162、164/166、118/120、122/124、112号道岔）至信号机D106止。",
+    "repair_time": "7:30-8:30"
+  },
+  {
+    "repair_id": "967",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东三场2:自信号机XⅢII 、XⅢ1起(包括348、346、306号道岔)至接车进路信号机SL10止",
+    "repair_time": "9:00-10:10"
+  },
+  {
+    "repair_id": "967",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东三场2:自信号机XⅢII 、XⅢ1起(包括348、346、306号道岔)至接车进路信号机SL10止",
+    "repair_time": "9:00-10:10"
+  },
+  {
+    "repair_id": "969",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东三场4:自进路信号机XⅢ3、XⅢ4起（包括344、324/326、328/330、332、308、302号道岔）至信号机D302止",
+    "repair_time": "8:00-9:00"
+  },
+  {
+    "repair_id": "969",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东三场4:自进路信号机XⅢ3、XⅢ4起（包括344、324/326、328/330、332、308、302号道岔）至信号机D302止",
+    "repair_time": "8:00-9:00"
+  },
+  {
+    "repair_id": "2319",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东一场2:自信号机XⅠⅧ、XⅠ9起（包括184、182、108、102号道岔）至SL18止",
+    "repair_time": "10:00-11:10"
+  },
+  {
+    "repair_id": "2321",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东一场4:自信号机XⅠⅦ起（包括180、142、144、110、106、104号道岔）至信号机XL27止（含106号岔至D112间线路），自信号机XⅠ6起（包括134/136、138/140、146号道岔）至146号道岔止",
+    "repair_time": "7:30-8:30"
+  },
+  {
+    "repair_id": "2329",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东站六场1:自芜湖东一场反向接车进路信号机(SL18)起-芜湖东六场接车进路信号机(XL5)止",
+    "repair_time": "10:00-11:10"
+  },
+  {
+    "repair_id": "2348",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场1:自信号机XL7、XL9起 (包括567、563/565号道岔)至信号机XL13止",
+    "repair_time": "10:38-12:38"
+  },
+  {
+    "repair_id": "2348",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场1:自信号机XL7、XL9起 (包括567、563/565号道岔)至信号机XL13止",
+    "repair_time": "10:38-12:38"
+  },
+  {
+    "repair_id": "2350",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场3:自信号机SVⅠ-SV5起（包括503、505、509、541号道岔）至信号机机XL13止",
+    "repair_time": "10:38-12:38"
+  },
+  {
+    "repair_id": "2350",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "芜湖东五场3:自信号机SVⅠ-SV5起（包括503、505、509、541号道岔）至信号机机XL13止",
+    "repair_time": "10:38-12:38"
+  },
+  {
+    "repair_id": "951",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "安江",
+    "repair_time": "10:48-12:18"
+  },
+  {
+    "repair_id": "2308",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "安江-慈湖",
+    "repair_time": "10:46-12:16"
+  },
+  {
+    "repair_id": "952",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "慈湖",
+    "repair_time": "10:46-12:16"
+  },
+  {
+    "repair_id": "2309",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "慈湖-马鞍山",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "2309",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "慈湖-马鞍山",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "2360",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山1:自进站信号机X起 (包括1/3、7、11/13/15、17/19/21、27、29、31号道岔)至上行出站信号机止",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "2361",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "马鞍山3:自北牵线车档起(包括5、9、23、25、33、35、37、39、41号道岔，不包括109、111、Z901号道岔) 至41号道岔止",
+    "repair_time": "7:30-9:00"
+  },
+  {
+    "repair_id": "1003",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山线路：1、Ⅱ、3-5道 ，每股道为一个维修区域(两端信号机内方)",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "1002",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山2:自进站信号机S起 (包括8、12/14、18、20、22、24、26号道岔)至下行出站信号机止",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "1002",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山2:自进站信号机S起 (包括8、12/14、18、20、22、24、26号道岔)至下行出站信号机止",
+    "repair_time": "10:44-12:14"
+  },
+  {
+    "repair_id": "2310",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山-采石",
+    "repair_time": "10:33-12:03"
+  },
+  {
+    "repair_id": "2311",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "采石-黄梅山",
+    "repair_time": "10:29-11:59"
+  },
+  {
+    "repair_id": "956",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "当涂",
+    "repair_time": "10:25-11:55"
+  },
+  {
+    "repair_id": "2313",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "当涂-毛耳山",
+    "repair_time": "10:20-11:50"
+  },
+  {
+    "repair_id": "2314",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "毛耳山",
+    "repair_time": "10:22-12:22"
+  },
+  {
+    "repair_id": "2314",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "毛耳山",
+    "repair_time": "10:22-12:22"
+  },
+  {
+    "repair_id": "2316",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥",
+    "repair_time": "10:24-12:24"
+  },
+  {
+    "repair_id": "2316",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "塔桥",
+    "repair_time": "10:24-12:24"
+  },
+  {
+    "repair_id": "3233",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山到发线股道",
+    "repair_time": "车站安排"
+  },
+  {
+    "repair_id": "3233",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "马鞍山到发线股道",
+    "repair_time": "车站安排"
+  },
+  {
+    "repair_id": "3236",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅰ",
+    "repair_area": "当涂到发线股道",
+    "repair_time": "车站安排"
+  },
+  {
+    "repair_id": "3236",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅰ",
+    "repair_area": "当涂到发线股道",
+    "repair_time": "车站安排"
+  },
+  {
+    "repair_id": "3242",
+    "repair_date": "2017-03-28",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东三场到发线股道",
+    "repair_time": "车站安排"
+  },
+  {
+    "repair_id": "3242",
+    "repair_date": "2017-03-27",
+    "repair_type": "Ⅱ",
+    "repair_area": "芜湖东三场到发线股道",
+    "repair_time": "车站安排"
+  }
+]
