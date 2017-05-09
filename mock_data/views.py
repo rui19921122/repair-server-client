@@ -18,7 +18,6 @@ def get_mock_plan_data(request):
 @api_view(['GET'])
 def get_mock_history_data(request):
     time.sleep(1)
-    print(11234)
     with open(r'./mock_data/global.json', 'r', encoding='utf8') as history:
         history_data = json.load(history)
     return Response(history_data)
