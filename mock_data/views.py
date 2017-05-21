@@ -12,7 +12,6 @@ import json
 @api_view(['GET'])
 def get_mock_plan_data(request):
     time.sleep(1)
-    print(11234)
     with open(r'./mock_data/plan.json', 'r', encoding='utf8') as plan:
         plan_data = json.load(plan)
     return Response(plan_data)
@@ -28,10 +27,11 @@ def get_mock_history_data(request):
 
 @api_view(["GET"])
 def get_mock_detail_data(request, wx_id):
+    time.sleep(2)
     path = os.path.join('./mock_data/data', '{}.json'.format(wx_id))
     if os.path.exists(path):
         with open(path, 'r', encoding='utf8') as detail:
             detail_data = json.load(detail)
             return Response(detail_data)
     else:
-        raise Http404
+        return Response(status=404)
