@@ -1,8 +1,10 @@
 import os
 import time
 
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render
+from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import json
@@ -27,11 +29,14 @@ def get_mock_history_data(request):
 
 @api_view(["GET"])
 def get_mock_detail_data(request, wx_id):
-    time.sleep(2)
-    path = os.path.join('./mock_data/data', '{}.json'.format(wx_id))
-    if os.path.exists(path):
-        with open(path, 'r', encoding='utf8') as detail:
-            detail_data = json.load(detail)
-            return Response(detail_data)
+    if request.user.is_authenticated():
+        time.sleep(2)
+        path = os.path.join('./mock_data/data', '{}.json'.format(wx_id))
+        if os.path.exists(path):
+            with open(path, 'r', encoding='utf8') as detail:
+                detail_data = json.load(detail)
+                return Response(detail_data)
+        else:
+            return Response(status=404)
     else:
-        return Response(status=404)
+        return Response(status=status.HTTP_403_FORBIDDEN)

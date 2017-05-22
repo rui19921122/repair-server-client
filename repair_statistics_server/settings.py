@@ -35,8 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'mock_data',
     'rest_framework',
-    'rest_framework_docs'
+    'rest_framework_docs',
+    'department',
+    'repair_plan_scrapy',
+    'repair_scrapy',
+    'session',
 ]
 
 MIDDLEWARE = [
