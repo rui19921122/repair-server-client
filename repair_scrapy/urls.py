@@ -4,7 +4,6 @@ from .views import scrapy_from_website_history, scrapy_from_login_detail
 url_names = {
     'get_repair_data_with_detail': 'get_repair_data_with_detail',
     'get_repair_single_data_with_detail': 'get_repair_single_data_with_detail'
-
 }
 
 urlpatterns = [

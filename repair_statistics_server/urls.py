@@ -17,6 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^mock-data/', include("mock_data.urls"))
+    url(r'^api/admin/', admin.site.urls),
+    url(r'^api/mock-data/', include("mock_data.urls")),
+    url(r'^api/user/', include("rest_auth.urls")),
+    url(r'^api/', include("rest_framework_docs.urls"))
 ]
