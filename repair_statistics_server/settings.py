@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'repair_plan_scrapy',
     'repair_scrapy',
     'session',
+    'web_config'
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+if DEBUG:
+    MIDDLEWARE.append(
+        "middleware.AllRequestDelayThreeSeconds.AllRequestDelayThreeSeconds"
+    )
 
 ROOT_URLCONF = 'repair_statistics_server.urls'
 
@@ -120,3 +125,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser',
+    )
+}
