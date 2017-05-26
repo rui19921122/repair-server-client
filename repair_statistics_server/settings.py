@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'repair_plan_scrapy',
     'repair_scrapy',
     'session',
-    'web_config'
+    'web_config',
+    'repair_data'
 ]
 
 MIDDLEWARE = [
