@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterField(
             model_name='inneruser',
-            name='user',
+            name='system_user',
             field=models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, related_name='inner_user', to=settings.AUTH_USER_MODEL),
         ),
     ]

@@ -5,7 +5,8 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from department.models import Department, InnerUser
+from department.models import Department
+from .models import UserDetailInfo
 
 
 @api_view(['GET'])
@@ -16,7 +17,7 @@ def UserInfo(request):
     """
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
     if request.user.is_authenticated():
-        user = InnerUser.objects.get(
+        user = UserDetailInfo.objects.get(
             user=request.user
         )
         return Response(
@@ -41,18 +42,18 @@ def Login(request):
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
     if request.user.is_authenticated():
         return Response(
-            data={'error': '您已经登陆，请<a href="api/user/logout/">登出</a>后重试'},
+            data={'error': '您已经登陆，请<a href="api/system_user/logout/">登出</a>后重试'},
             status=status.HTTP_400_BAD_REQUEST,
         )
     else:
         try:
-            user = InnerUser.objects.filter(username=request.data.get('username'))
+            user = UserDetailInfo.objects.filter(username=request.data.get('username'))
             if user.count() == 1:
                 user = user[0]
             elif user.count() == 0:
                 user = User.objects.filter(username=request.data.get('username'))
                 if user.count() == 1:
-                    user = InnerUser.objects.get(user_id=user[0].id)
+                    user = UserDetailInfo.objects.get(user_id=user[0].id)
                 else:
                     raise ValueError("username is not found")
         except ValueError:

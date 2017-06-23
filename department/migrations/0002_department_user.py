@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='department',
-            name='user',
+            name='system_user',
             field=models.OneToOneField(default=0, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL),
             preserve_default=False,
         ),

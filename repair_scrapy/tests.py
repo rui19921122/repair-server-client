@@ -15,7 +15,7 @@ class TestRepairScrapyAndSaveResult(APITestCase):
     # def test_api_detail(self):
     #     url = reverse('get_repair_data_with_detail', args=['2017', '03', '25', '2017', '03', '28'])
     #     self.client.force_login(
-    #         InnerUser.objects.first().user
+    #         InnerUser.objects.first().system_user
     #     )
     #     res = self.client.get(url)
     #     path = os.path.join(

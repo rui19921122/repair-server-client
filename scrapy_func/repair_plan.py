@@ -1,15 +1,9 @@
+# 从路局天窗修计划中读取历史内容
 import requests
-from django.http import HttpResponse
-from django.shortcuts import render
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
-
-# Create your views here.
-# 因为天窗修计划的查询与登销记的查询不在一个系统中，因此这边的采用独立的Session
+from bs4 import BeautifulSoup
+import datetime
 
 OPEN_PLAN_URL = 'http://10.128.20.156:8080/tcx/tcx/jhbs/jhsb_lsjhsb_info.faces'
-from bs4 import BeautifulSoup
-
 get_headers = {
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "Accept-Encoding": "gzip,deflate, sdch",
@@ -36,22 +30,17 @@ post_headers = {
 }
 
 
-@api_view(['GET'])
-def open_plan_scrapy_view(request,
-                          start_year, start_month, start_date,
-                          end_year, end_month, end_date
-                          ):
-    data = '''lsKfSbdate=lsKfSbdate&lsKfSbdate%3Axl=&lsKfSbdate%3AstartDate={}&lsKfSbdate%3AendDate={}&lsKfSbdate%3Aj_idt13=2100020&lsKfSbdate%3Aj_idt15=&lsKfSbdate%3Adwid=&lsKfSbdate%3Aj_idt30=&lsKfSbdate%3Aj_idt32=&lsKfSbdate%3Aj_idt37=&lsKfSbdate%3AjhsbTable%3Awi=&lsKfSbdate%3AjhsbTable%3Asi=%7C%7C%7C&javax.faces.ViewState={}&javax.faces.source=lsKfSbdate%3Aj_idt46&javax.faces.partial.event=click&javax.faces.partial.execute=lsKfSbdate%3Aj_idt46%20lsKfSbdate&javax.faces.partial.render=lsKfSbdate&javax.faces.behavior.event=click&AJAX%3AEVENTS_COUNT=1&javax.faces.partial.ajax=true'''
-
+def get_repair_plan_data_by_date(start: datetime.date, end: datetime.date):
     session = requests.session()
+    data = '''lsKfSbdate=lsKfSbdate&lsKfSbdate%3Axl=&lsKfSbdate%3AstartDate={}&lsKfSbdate%3AendDate={}&lsKfSbdate%3Aj_idt13=2100020&lsKfSbdate%3Aj_idt15=&lsKfSbdate%3Adwid=&lsKfSbdate%3Aj_idt30=&lsKfSbdate%3Aj_idt32=&lsKfSbdate%3Aj_idt37=&lsKfSbdate%3AjhsbTable%3Awi=&lsKfSbdate%3AjhsbTable%3Asi=%7C%7C%7C&javax.faces.ViewState={}&javax.faces.source=lsKfSbdate%3Aj_idt46&javax.faces.partial.event=click&javax.faces.partial.execute=lsKfSbdate%3Aj_idt46%20lsKfSbdate&javax.faces.partial.render=lsKfSbdate&javax.faces.behavior.event=click&AJAX%3AEVENTS_COUNT=1&javax.faces.partial.ajax=true'''
     start_page = session.get(
         OPEN_PLAN_URL, headers=get_headers
     )
     if start_page.status_code == 200:
         start_page_soup = BeautifulSoup(start_page.text, 'html.parser')
         view_state = start_page_soup.find('input', {'id': 'javax.faces.ViewState'})['value']
-        start_date = '{}-{}-{}'.format(start_year, start_month, start_date)
-        end_date = '{}-{}-{}'.format(end_year, end_month, end_date)
+        start_date = '{}-{}-{}'.format(start.year, start.month, start.day)
+        end_date = '{}-{}-{}'.format(end.year, end.month, end.day)
         data = data.format(
             start_date, end_date, view_state
         )
@@ -63,10 +52,13 @@ def open_plan_scrapy_view(request,
         if res.status_code == 200:
             text = BeautifulSoup(res.text, 'lxml')
             content_list = []
-            items = text.find('tbody', {'id': 'lsKfSbdate:jhsbTable:tbn'}).find_all('tr')[3:]
+            try:
+                items = text.find('tbody', {'id': 'lsKfSbdate:jhsbTable:tbn'}).find_all('tr')[3:]
+            except AttributeError:
+                raise ValueError('没有发现任何数据')
             for index, item in enumerate(items):
                 tds = items[index].find_all('td')
-                if len(tds) >= 17:
+                if len(tds) >= 17:  # 确保为主项，因为合并单元格项很多数据都没有
                     repair_id = tds[0].find('div').find('div').get_text('|', strip=True).split('|')[-1]
                     repair_date = tds[1].find('div').find('div').get_text('|', strip=True).split('|')[-1]
                     repair_type = tds[2].find('div').find('div').get_text('|', strip=True).split('|')[-1]
@@ -80,7 +72,12 @@ def open_plan_scrapy_view(request,
                             'repair_time': repair_time,
                         }
                     )
-            return Response(data=content_list)
+            return content_list
 
     else:
         raise ValueError()
+
+
+if __name__ == '__main__':
+    f = get_repair_plan_data_by_date(datetime.date(2017, 6, 10), datetime.date(2017, 6, 12))
+    print(f)

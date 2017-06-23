@@ -24,7 +24,7 @@ SECRET_KEY = 'w$ac)w=c%^jx(ed5j_cp6vhs!hs5qye764*30phr-ze@k1vi#6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -42,13 +42,36 @@ INSTALLED_APPS = [
     'repair_plan_scrapy',
     'repair_scrapy',
     'session',
+    'corsheaders',
     'web_config',
-    'repair_data'
+    'repair_data',
+    'scrapy_plan',
+    'system_user'
 ]
 
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8000',
+    '10.133.30.126:3000'
+)
+
+CORS_ALLOW_HEADERS = (
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'system_user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Access-Control-Allow-Origin',
+    'Access-Control-Allow-Methods',
+)
+CORS_ALLOW_CREDENTIALS = True
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

@@ -1,8 +1,10 @@
 import datetime
 
 from bs4 import BeautifulSoup
+from django.contrib.auth.models import User, AnonymousUser
 from rest_framework.decorators import api_view
 
+from system_user.models import UserDetailInfo
 from header import header
 
 from .ser import RepairScrapyDetail, RepairScrapyHistory
@@ -24,6 +26,11 @@ def scrapy_from_website_history(request,
     从路局需要登录的网页中爬取
     """
     url = REPAIR_HISTORY_URL
+    assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
+    if request.user.is_authenticated():
+        department = UserDetailInfo.objects.get(user=request.user).department
+    else:
+        return Response(status=403)
     text = Session.get_text(url=url,
                             method='post',
                             data={
@@ -42,7 +49,7 @@ def scrapy_from_website_history(request,
                                 'wxdxjForm:sbDateSel2': end_year + '-' + end_month + '-' + end_date,
                             },
                             header=header,
-                            department=request.user.inner_user.department
+                            department=department
                             )
     beautiful_text = BeautifulSoup(text, 'lxml')
     print(beautiful_text)
@@ -95,7 +102,7 @@ def scrapy_from_login_detail(request, wx_id):
         method='get',
         header=header,
         need_login=False
-    ), 'lxml')
+    ), 'html.parser')
     tds = text.find(
         'tbody', {'id': 'wx_ydjForm:table_data'}
     ).find('tr').find_all('td')

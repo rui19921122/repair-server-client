@@ -8,6 +8,3 @@ class DepartmentAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(InnerUser)
-class UserAdmin(admin.ModelAdmin):
-    pass
