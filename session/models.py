@@ -51,7 +51,9 @@ class Session(models.Model):
         return cookie
 
     @staticmethod
-    def get_text(url, method, department, header, retry=False, data=None, need_login=True):
+    def get_text(url: object, method: object, department: object, header: object, retry: object = False,
+                 data: object = None,
+                 need_login: object = True) -> object:
         if data is None:
             data = {
             }

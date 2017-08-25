@@ -31,17 +31,30 @@ class TestScrapyPlan(APITestCase):
         if is_in_rail_net:
             start_date = datetime.date.today() - datetime.timedelta(days=8)
             end_date = datetime.date.today() - datetime.timedelta(days=1)
-            url = reverse('查询天窗修计划历史', kwargs={
-                'start_date': start_date.strftime('%Y-%m-%d'),
-                'end_date': end_date.strftime('%Y-%m-%d'),
-                'force_update': 'true'
-            })
-            self.client.force_login(self.test_user)
+            url = reverse('查询天窗修计划历史')
+            url += '?'
+            url += '&'.join([
+                'start_date=' + start_date.strftime('%Y-%m-%d'),
+                'end_date=' + end_date.strftime('%Y-%m-%d'),
+                'force_update=' + 'true'
+            ])
+            self.client.force_login(self.test_user.user)
             response = self.client.get(url)
             self.assertEqual(response.status_code, 200)
-            self.assertEqual(response.body['length'], len(response.body['data']))
+            self.assertEqual(response.data['length'], len(response.data['data']))
+            for i in response.data['data']:
+                self.assertGreaterEqual(len(i['content']), 1)
+            print(response.data)
         else:
             return
 
     def test_get_data_from_cache(self):
+        """从缓存获取计划"""
+        pass
+
+    def test_get_date_by_generator(self):
+        """
+        测试生成函数是否工作
+        :return: 
+        """
         pass

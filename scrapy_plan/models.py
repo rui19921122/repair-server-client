@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 
@@ -17,12 +19,19 @@ class WorkWithDepartmentList(models.Model):
 
 
 class ScrapyPlanCacheList(models.Model):
-    date = models.DateField(verbose_name='日期')
+    """
+    一天内的天窗修计划缓存
+    """
+    start_date = models.DateField(verbose_name='开始日期')
+    end_date = models.DateField(verbose_name='结束日期')
     details = models.ManyToManyField('scrapy_plan.ScrapyPlanContentDetail', verbose_name='内容')
     update_time = models.DateTimeField(verbose_name='更新日期', auto_now=True)
 
 
 class ScrapyPlanCacheDetail(models.Model):
+    """
+    天窗修计划详情
+    """
     number = models.CharField(max_length=4, verbose_name='编号')
     post_date = models.DateField(verbose_name='日期')
     type = models.CharField(max_length=10, verbose_name='类型')
@@ -30,6 +39,7 @@ class ScrapyPlanCacheDetail(models.Model):
     area = models.CharField(max_length=50, verbose_name='维修区域')
     plan_time = models.CharField(max_length=50, verbose_name='维修时间')
     apply_place = models.CharField(max_length=50, verbose_name='工作内容')
+    content = models.ManyToManyField('scrapy_plan.ScrapyPlanContentDetail', verbose_name='详情')
 
 
 class ScrapyPlanContentDetail(models.Model):
