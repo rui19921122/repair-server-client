@@ -49,6 +49,7 @@ def login_view(request):
     else:
         try:
             user = UserDetailInfo.objects.filter(username=request.data.get('username'))
+            print(request.data)
             if user.count() == 1:
                 user = user[0]
             elif user.count() == 0:
@@ -78,3 +79,16 @@ def login_view(request):
                 data={'error': '登陆失败，密码错误'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+
+
+@api_view(['GET'])
+def username_autocomplete(request):
+    assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
+    input_username = request.GET.get('value')
+    Objs = User.objects.filter(username__startswith=input_username)
+
+    return Response(
+        data={
+            'values': [Obj.username] for Obj in Objs
+        }
+    )
