@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'rest_framework_docs',
     'department',
     'repair_plan_scrapy',
-    'repair_scrapy',
     'session',
     'corsheaders',
     'web_config',
