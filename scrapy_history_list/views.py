@@ -21,7 +21,7 @@ class ScrapyHistoryListView(generics.RetrieveAPIView):
         if end_date < start_date:
             raise ValueError("日期提供错误")
         if is_in_rail_net:
-            data = get_repair_plan_list(start_date, end_date)
+            data = get_repair_plan_list(start_date, end_date, username='whdz01',password='111111')
         else:
             data = generate_repair_plan_list(start_date, end_date)
         return Response(data={'data': data})

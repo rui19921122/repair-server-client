@@ -53,16 +53,12 @@ def get_plan_data_by_date(start: datetime.date, end: datetime.date):
             text = BeautifulSoup(res.text, 'lxml')
             content_list = []
             try:
-                items = text.find('tbody', {'id': 'lsKfSbdate:jhsbTable:tbn'}).find_all('tr')[3:]
+                items = text.find('tbody', {'id': 'lsKfSbdate:jhsbTable:tbn'}).find_all('tr')
             except AttributeError:
                 raise ValueError('没有发现任何数据')
-            detail = None
             for index, item in enumerate(items):
                 tds = items[index].find_all('td')
-                if len(tds) >= 17:  # 确保为主项，因为合并单元格项很多数据都没有
-                    if detail:
-                        content_list.append(detail)
-                        detail = None
+                if len(tds) >= 17:
                     number = tds[0].find('div').find('div').get_text('|', strip=True).split('|')[-1]
                     post_date = tds[1].find('div').find('div').get_text('|', strip=True).split('|')[-1]
                     _type = tds[2].find('div').find('div').get_text('|', strip=True).split('|')[-1]
@@ -81,6 +77,19 @@ def get_plan_data_by_date(start: datetime.date, end: datetime.date):
                     operate_track_switch = tds[14].find('div').find('div').get_text(strip=True)
                     work_with_department = tds[16].find('div').find('div').get_text('|', strip=True).split('|')[-1]
                     extra_message = tds[17].find('div').find('div').get_text('|', strip=True).split('|')[-1]
+                    content = {
+                        "work_department": work_department,
+                        "work_place": work_place,
+                        "work_project": work_project,
+                        "work_detail": work_detail,
+                        "off_power_unit": off_power_unit,
+                        "work_vehicle": work_vehicle,
+                        "protect_mileage": protect_mileage,
+                        "on_duty_person": on_duty_person,
+                        "operate_track_switch": operate_track_switch,
+                        "work_with_department": work_with_department,
+                        "extra_message": extra_message,
+                    }
                     detail = {
                         'number': number,
                         'direction': direction,
@@ -89,54 +98,16 @@ def get_plan_data_by_date(start: datetime.date, end: datetime.date):
                         'plan_time': plan_time,
                         'area': area,
                         'apply_place': apply_place,
-                        'content': [
-                            {
-                                "work_department": work_department,
-                                "work_place": work_place,
-                                "work_project": work_project,
-                                "work_detail": work_detail,
-                                "off_power_unit": off_power_unit,
-                                "work_vehicle": work_vehicle,
-                                "protect_mileage": protect_mileage,
-                                "on_duty_person": on_duty_person,
-                                "operate_track_switch": operate_track_switch,
-                                "work_with_department": work_with_department,
-                                "extra_message": extra_message,
-                            }
-                        ]
+                        'content': [content]
                     }
-                else:
-                    if detail:
-                        work_department = tds[1].find('div').find('div').get_text(strip=True)
-                        work_place = tds[2].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        work_project = tds[3].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        work_detail = tds[4].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        off_power_unit = tds[5].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        work_vehicle = tds[6].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        protect_mileage = tds[7].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        on_duty_person = tds[8].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        operate_track_switch = tds[9].find('div').find('div').get_text(strip=True)
-                        work_with_department = tds[11].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        extra_message = tds[12].find('div').find('div').get_text('|', strip=True).split('|')[-1]
-                        detail['content'].append(
-                            {
-                                "work_department": work_department,
-                                "work_place": work_place,
-                                "work_project": work_project,
-                                "work_detail": work_detail,
-                                "off_power_unit": off_power_unit,
-                                "work_vehicle": work_vehicle,
-                                "protect_mileage": protect_mileage,
-                                "on_duty_person": on_duty_person,
-                                "operate_track_switch": operate_track_switch,
-                                "work_with_department": work_with_department,
-                                "extra_message": extra_message,
-                            }
-                        )
+                    inner_index = -1
+                    for inner_inner_index, i in enumerate(content_list):
+                        if number == i['number']:
+                            inner_index = inner_inner_index
+                    if inner_index == -1:
+                        content_list.append(detail)
                     else:
-                        raise ValueError
-            if detail:
-                content_list.append(detail)
+                        content_list[inner_index]['content'].append(content)
             return content_list
 
     else:
