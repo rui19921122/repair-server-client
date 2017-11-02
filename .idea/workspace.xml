@@ -2,29 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cd71631-d705-4173-a20e-660864650d11" name="Default" comment="增加了一些模拟数据">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/repair_statistics_server.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/admin.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/apps.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/fixtures/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/fixtures/data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/ser.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/urls.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repair_scrapy/views.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy_history_detail/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repair_statistics_server/settings.py" afterPath="$PROJECT_DIR$/repair_statistics_server/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_plan/serization.py" afterPath="$PROJECT_DIR$/scrapy_plan/serization.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repair_statistics_server/urls.py" afterPath="$PROJECT_DIR$/repair_statistics_server/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy_func/get_repair_detail.py" afterPath="$PROJECT_DIR$/scrapy_func/get_repair_detail.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,10 +22,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/repair_statistics_server$tests.coverage" NAME="tests Coverage Results" MODIFIED="1498184187678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy_plan" />
-    <SUITE FILE_PATH="coverage/repair_statistics_server$Test__scrapy_plan.coverage" NAME="Test: scrapy_plan Coverage Results" MODIFIED="1498186661895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/repair_statistics_server$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1498184214177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/repair_statistics_server$repair_plan.coverage" NAME="repair_plan Coverage Results" MODIFIED="1497426420616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy_func" />
+    <SUITE FILE_PATH="coverage/repair_statistics_server$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1498184214177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/repair_statistics_server$Test__scrapy_plan.coverage" NAME="Test: scrapy_plan Coverage Results" MODIFIED="1498186661895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/repair_statistics_server$tests.coverage" NAME="tests Coverage Results" MODIFIED="1498184187678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scrapy_plan" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -47,27 +35,49 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Django default" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
+    <expand />
+    <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy_plan/views.py">
+      <file leaf-file-name="get_history_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_func/get_history_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_history_detail/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -75,34 +85,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scrapy_plan/models.py">
+      <file leaf-file-name="get_repair_detail.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scrapy_func/get_repair_detail.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system_user/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="77" column="28" lean-forward="false" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+            <state relative-caret-position="296">
+              <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system_user/models.py">
+        <entry file="file://$PROJECT_DIR$/mock_data/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+            <state relative-caret-position="164">
+              <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_history_detail/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repair_statistics_server/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="8" column="68" lean-forward="true" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repair_data/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="get_plan_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scrapy_func/get_plan_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+              <folding>
+                <element signature="e#18#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,6 +156,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -151,7 +196,6 @@
         <option value="$PROJECT_DIR$/web_config/views.py" />
         <option value="$PROJECT_DIR$/web_config/models.py" />
         <option value="$PROJECT_DIR$/middleware/AllRequestDelayThreeSeconds.py" />
-        <option value="$PROJECT_DIR$/repair_statistics_server/urls.py" />
         <option value="$PROJECT_DIR$/repair_data/models.py" />
         <option value="$PROJECT_DIR$/repair_data/urls.py" />
         <option value="$PROJECT_DIR$/repair_plan_scrapy/views.py" />
@@ -161,15 +205,25 @@
         <option value="$PROJECT_DIR$/department/models.py" />
         <option value="$PROJECT_DIR$/department/admin.py" />
         <option value="$PROJECT_DIR$/repair_statistics_server/locals.py" />
-        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/repair_scrapy/views.py" />
+        <option value="$PROJECT_DIR$/repair_statistics_server/settings.py" />
         <option value="$PROJECT_DIR$/system_user/views.py" />
         <option value="$PROJECT_DIR$/repair_data/views.py" />
-        <option value="$PROJECT_DIR$/scrapy_plan/tests.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scrapy_plan/models.py" />
-        <option value="$PROJECT_DIR$/repair_statistics_server/settings.py" />
-        <option value="$PROJECT_DIR$/scrapy_plan/serization.py" />
+        <option value="$PROJECT_DIR$/scrapy_plan/tests.py" />
+        <option value="$PROJECT_DIR$/scrapy_plan/views.py" />
+        <option value="$PROJECT_DIR$/scrapy_history_list/views.py" />
+        <option value="$PROJECT_DIR$/new.json" />
+        <option value="$PROJECT_DIR$/1.html" />
+        <option value="$PROJECT_DIR$/2.html" />
+        <option value="$PROJECT_DIR$/scrapy_func/get_plan_list.py" />
+        <option value="$PROJECT_DIR$/scrapy_func/get_station_repair_plan.py" />
+        <option value="$PROJECT_DIR$/repair_statistics_server/urls.py" />
+        <option value="$PROJECT_DIR$/scrapy_history_detail/urls.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/scrapy_history_detail/views.py" />
+        <option value="$PROJECT_DIR$/scrapy_func/get_repair_detail.py" />
       </list>
     </option>
   </component>
@@ -180,12 +234,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="840" />
+    <option name="height" value="505" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
@@ -207,28 +260,41 @@
         <subPane>
           <expand>
             <path>
-              <item name="repair_server_client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="repair_server_client" type="462c0819:PsiDirectoryNode" />
+              <item name="repair_statistics_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="repair_statistics_server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="repair_statistics_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="repair_statistics_server" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapy_history_detail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="repair_statistics_server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="repair_statistics_server" type="462c0819:PsiDirectoryNode" />
+              <item name="scrapy_history_list" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/Git/bin/git.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../工作/内网编程/safeColletcions" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="set&#9;FILE&#9;file://C:/Users/Administrator/Desktop/repair_statistics_server/repair_statistics_server/settings.py&#10;views&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/user/views.py&#10;urls&#9;null&#9;null&#10;middleware&#9;null&#9;null&#10;urls.py&#9;FILE&#9;file://C:/Users/Administrator/Desktop/repair_server_client/repair_scrapy/urls.py" />
+    <property name="SearchEverywhereHistoryKey" value="config&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/config.py&#10;head&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/header.py&#10;url.&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/repair_statistics_server/urls.py&#10;con&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/config.py&#10;set&#9;FILE&#9;file://C:/Users/Administrator/Desktop/repair_statistics_server/repair_statistics_server/settings.py&#10;views&#9;FILE&#9;file://C:/Users/han/Desktop/repair_statistics_server/user/views.py&#10;urls&#9;null&#9;null&#10;middleware&#9;null&#9;null&#10;urls.py&#9;FILE&#9;file://C:/Users/Administrator/Desktop/repair_server_client/repair_scrapy/urls.py" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="typescript-compiler-editor-notification" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Django default driver" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/config.py" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\han\Desktop\repair_statistics_server\scrapy_history_detail" />
       <recent name="C:\Users\han\Desktop\repair_statistics_server\repair_data" />
       <recent name="C:\Users\han\Desktop\repair_statistics_server\web_config" />
       <recent name="C:\Users\han\Desktop\repair_statistics_server\mock_data" />
@@ -273,7 +339,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
       <node-interpreter value="project" />
@@ -303,7 +368,6 @@
       <module name="repair_statistics_server" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
-      <method />
     </configuration>
     <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -317,7 +381,6 @@
       <module name="repair_statistics_server" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="ADDITIONAL_ARGS" value="" />
-      <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -336,7 +399,6 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
     </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -359,7 +421,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -372,7 +433,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <module name="repair_statistics_server" />
-      <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
@@ -399,7 +459,53 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="repair_statistics_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="repair_statistics_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="repair_statistics_server" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -418,24 +524,6 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration name="repair_plan" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_func" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="repair_statistics_server" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy_func/repair_plan.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
     <configuration name="repair_statistics_server" type="Python.DjangoServer" factoryName="Django server">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -445,13 +533,13 @@
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="repair_statistics_server" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="localhost" />
+      <option name="host" value="" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
       <option name="runTestServer" value="false" />
@@ -459,35 +547,6 @@
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
     </configuration>
-    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scrapy_plan" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="repair_statistics_server" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrapy_plan/tests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Django server.repair_statistics_server" />
-      <item index="1" class="java.lang.String" itemvalue="Python.repair_plan" />
-      <item index="2" class="java.lang.String" itemvalue="Python.tests" />
-    </list>
-    <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.tests" />
-        <item index="1" class="java.lang.String" itemvalue="Python.repair_plan" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -559,7 +618,35 @@
       <option name="project" value="LOCAL" />
       <updated>1496218945398</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="增加了一些模拟数据">
+      <created>1504161910939</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1504161910940</updated>
+    </task>
+    <task id="LOCAL-00010" summary="增加了一些模拟数据">
+      <created>1504254809919</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1504254809920</updated>
+    </task>
+    <task id="LOCAL-00011" summary="增加了一些模拟数据">
+      <created>1504683793786</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1504683793786</updated>
+    </task>
+    <task id="LOCAL-00012" summary="增加了一些模拟数据">
+      <created>1506069733886</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1506069733886</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -589,20 +676,22 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32716763" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273743" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35144508" sideWeight="0.50488997" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283237" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39217877" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31843576" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35144508" sideWeight="0.49511003" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32865497" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19189766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17665036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2591687" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@repair_statistics_server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31907514" sideWeight="0.49511003" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3995381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39884394" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -611,7 +700,6 @@
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290993" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="manage.py@repair_statistics_server" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31986144" sideWeight="0.49511003" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -641,44 +729,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/session/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="16" column="52" lean-forward="false" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock_data/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/contrib/auth/decorators.py" />
-    <entry file="file://$PROJECT_DIR$/mock_data/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/contrib/sites/middleware.py" />
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/middleware/__init__.py" />
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/utils/functional.py" />
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/contrib/auth/__init__.py" />
-    <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/contrib/auth/middleware.py" />
-    <entry file="dbDummy://dbtable:/23ca440d/a38ad334-4e2d-489b-b20a-c733b77dcc3d/main.sqlite_master" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ff541f45-c943-489e-bf7b-ee3f877cd018/console.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64297143-2641-40c7-b0fb-895252b9805d/console.sql" />
     <entry file="dbDummy://dbtable:/23ca440d/50a4a0df-7233-4926-bfa0-ae304dba173a/main.auth_user" />
-    <entry file="file://$PROJECT_DIR$/header.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/rest_framework/permissions.py" />
     <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/middleware/common.py" />
     <entry file="file://C:/Program Files/Anaconda3/Lib/site-packages/django/utils/deprecation.py" />
@@ -709,13 +761,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
           <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repair_data/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -771,116 +816,195 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repair_statistics_server/locals.py" />
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repair_scrapy/urls.py" />
     <entry file="file://$PROJECT_DIR$/system_user/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/Django-1.11-py3.6.egg/django/urls/base.py" />
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/Django-1.11-py3.6.egg/django/test/client.py" />
-    <entry file="file://$PROJECT_DIR$/repair_statistics_server/urls.py">
+    <entry file="file://$PROJECT_DIR$/repair_statistics_server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="1537">
+          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repair_data/views.py">
+    <entry file="file://$PROJECT_DIR$/repair_scrapy/views.py" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1798">
-          <caret line="61" column="65" lean-forward="false" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
+        <state relative-caret-position="173">
+          <caret line="124" column="24" lean-forward="false" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock_data/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_plan/serization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scrapy_plan/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="29">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repair_scrapy/views.py" />
+    <entry file="file://$PROJECT_DIR$/scrapy_plan/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_plan/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/system_user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
+        <state relative-caret-position="473">
           <caret line="77" column="28" lean-forward="false" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.json" />
+    <entry file="file://$PROJECT_DIR$/1.html" />
+    <entry file="file://$PROJECT_DIR$/2.html" />
+    <entry file="file://$PROJECT_DIR$/scrapy_plan/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="37" column="641" lean-forward="false" selection-start-line="37" selection-start-column="641" selection-end-line="37" selection-end-column="641" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_func/get_plan_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#18#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_plan/views.py">
+    <entry file="file://$PROJECT_DIR$/repair_data/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="71" column="58" lean-forward="true" selection-start-line="71" selection-start-column="58" selection-end-line="71" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_history_list/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_func/get_station_repair_plan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#29#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repair_data/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_func/get_history_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="33" column="49" lean-forward="false" selection-start-line="33" selection-start-column="49" selection-end-line="33" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <caret line="0" column="39" lean-forward="false" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_history_detail/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repair_statistics_server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="8" column="68" lean-forward="true" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mock_data/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy_history_detail/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repair_statistics_server/settings.py">
+    <entry file="file://$PROJECT_DIR$/scrapy_func/get_repair_detail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api_doc/路局api.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SECOND">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repair_statistics_server/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="130" column="13" lean-forward="false" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_plan/serization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="296">
+          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="false" />
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scrapy_plan/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

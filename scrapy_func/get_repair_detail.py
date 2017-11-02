@@ -23,7 +23,7 @@ re_find_actual_time_pattern = re.compile(r'\(2\).*?(\d{4}-\d{2}-\d{2}) (\d{2}:\d
 
 
 def generate_repair_detail_by_inner_id(inner_id: str):
-    s = MockPlanHistoryDetail.objects.get(inner_id=inner_id)
+    s = MockPlanHistoryDetail.objects.filter(inner_id=inner_id).first()
     return {
         "number": s.number,  # 施工维修编号，格式为[JDZ]\d{3}
         "repair_content": s.repair_content,  # 施工项目
@@ -37,18 +37,21 @@ def generate_repair_detail_by_inner_id(inner_id: str):
     }
 
 
+from header import header
+
+
 def get_repair_detail_by_inner_id(inner_id: str):
     if not is_in_rail_net:
         return generate_repair_detail_by_inner_id(inner_id)
     detail_url = url + '?wxArg=' + inner_id
-    response = requests.get(detail_url)
+    response = requests.get(detail_url, headers=header)
     if response.status_code == 200:
         pass
     else:
         raise ConnectionError("连接失败，返回的状态码为" + response.status_code)
     soup = BeautifulSoup(response.text, 'lxml')
-    tr = soup.find('tbody', {'id': 'wx_ydjForm:table_data'}) \
-        .find('tr')  # 存储详情的表格
+    print(response.text)
+    tr = soup.find('tbody', {'id': 'wx_ydjForm:table_data'}).find('tr')  # 存储详情的表格
     assert isinstance(tr, bs4.element.Tag)
     tds = tr.find_all('td')  # type:typing.List[bs4.element.Tag]
     number = tds[0].get_text(strip=True)  # type:str
@@ -79,6 +82,19 @@ def get_repair_detail_by_inner_id(inner_id: str):
     except:
         raise ValueError("解析错误，{}".format(actual_end_text))
     actual_host_person = tds[9].get_text(strip=True)
+    MockPlanHistoryDetail.objects.create(
+        number=number,
+        repair_content=repair_content,
+        effect_area=effect_area,
+        publish_start_time=publish_start_time,
+        publish_start_number=publish_start_number,
+        actual_start_time=actual_start_time,
+        actual_end_time=actual_end_time,
+        actual_end_number=actual_end_number,
+        actual_host_person=actual_host_person,
+        inner_id=inner_id
+    )
+
     return {
         "number": number,  # 施工维修编号，格式为[JDZ]\d{3}
         "repair_content": repair_content,  # 施工项目
