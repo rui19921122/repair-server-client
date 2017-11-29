@@ -1,7 +1,7 @@
 import datetime
 
 from django.contrib.auth.models import User, AnonymousUser
-from rest_framework import serializers, generics
+from rest_framework import serializers
 # Create your views here.
 from rest_framework import status
 # Create your views here.
@@ -33,6 +33,24 @@ class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
             if data['actual_end_time'] < data['actual_start_time']:
                 raise ValidationError("实际结束时间不能早于开始时间")
 
+    def create(self, validate_data):
+        detail = DetailData(
+            department=validate_data['department'],
+            date=validate_data['date'],
+            number=validate_data['number'],
+            plan_start_time=validate_data['plan_start_time'],
+            actual_start_time=validate_data['actual_start_time'],
+            plan_end_time=validate_data['plan_end_time'],
+            actual_end_time=validate_data['actual_end_time'],
+            manual=validate_data['manual'],
+            repair_type='',
+            actual_start_number=validate_data['actual_start_number'],
+            actual_end_number=validate_data['actual_end_number'],
+            person=validate_data['person'],
+        )
+        detail.save()
+        return detail
+
 
 class RepairPlanPostDataFromClientListSer(serializers.Serializer):
     date = serializers.DateField(required=True)
@@ -47,31 +65,11 @@ class RepairPlanPostDataFromClientListSer(serializers.Serializer):
             # 删除已有的数据
             exists.delete()
         for i in validated_data['contents']:
-            i.save()
-            detail = DetailData(
-                department=validated_data['department'],
-                date=validated_data['date'],
-                number=i['number'],
-                plan_start_time=i['plan_start_time'],
-                actual_start_time=i['actual_start_time'],
-                plan_end_time=i['plan_end_time'],
-                actual_end_time=i['actual_end_time'],
-                manual=i['manual'],
+            assert isinstance(i, RepairPlanPostDataFromClientSingleContentSer)
+            i.save(department=validated_data['department'], date=validated_data['date'])
 
-            )
-
-
-class DetailDataListSer(serializers.ModelSerializer):
-    url = serializers.HyperlinkedIdentityField(view_name='detail-url')
-
-    def create(self, validated_data):
-        Detail = DetailData(
-            **validated_data
-        )
-        Detail.date = validated_data['date']
-        Detail.department = validated_data['department']
-        Detail.save()
-        return Detail
+    def update(self, instance, validated_data):
+        raise NotImplementedError("can't update data by serialization")
 
 
 @api_view(["POST"])
@@ -81,44 +79,14 @@ def post_detailed_data(request):
         department = UserDetailInfo.objects.get(user=request.user).department
     else:
         return Response(status=403)
-    check_dates = set()
-    print(request.data)
-    for i in request.data['data']:
-        check_dates.add(datetime.date(i['date']))
-    print(check_dates)
-    data = DetailDataSer(data=request.data, many=True)
+    data = RepairPlanPostDataFromClientListSer(data=request.data, many=True)
     if data.is_valid():
-        data.save(department=department)
+        data.save()
         return Response(status=201)
     else:
         return Response(status=status.HTTP_400_BAD_REQUEST,
                         data=data.errors
                         )
-
-
-@api_view(['GET'])
-def get_detailed_data_list(request, start_year, start_month, start_date, end_year, end_month, end_date):
-    start = datetime.date(int(start_year), int(start_month), int(start_date))
-    end = datetime.date(int(end_year), int(end_month), int(end_date))
-    assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
-        department = UserDetailInfo.objects.get(user=request.user).department
-    else:
-        return Response(status=403)
-    return Response(
-        data=DetailDataSer(
-            DetailData.objects.filter(date__gte=start, date__lte=end, department=department),
-            context={'request': request},
-            many=True).data)
-
-
-class get_detailed_data(generics.RetrieveUpdateDestroyAPIView):
-    queryset = DetailData.objects.all()
-    serializer_class = DetailDataSer
-
-    def check_object_permissions(self, request, obj):
-        return request.user.is_authenticated() and UserDetailInfo.objects.get(
-            user=request.user).department == obj.department
 
 
 # Create your views here.
