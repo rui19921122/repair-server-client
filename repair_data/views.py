@@ -15,8 +15,8 @@ from system_user.models import UserDetailInfo
 
 class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
     number = serializers.CharField(required=True)
-    plan_start_time = serializers.DateTimeField(required=False)
-    plan_end_time = serializers.DateTimeField(required=False)
+    plan_start_time = serializers.DateTimeField(required=False, allow_null=True)
+    plan_end_time = serializers.DateTimeField(required=False, allow_null=True)
     canceled = serializers.BooleanField(default=False)
     manual = serializers.BooleanField(default=False)
     actual_start_time = serializers.DateTimeField(required=False)
@@ -32,6 +32,7 @@ class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
         if data['actual_end_time'] and data['actual_start_time']:
             if data['actual_end_time'] < data['actual_start_time']:
                 raise ValidationError("实际结束时间不能早于开始时间")
+        return data
 
     def create(self, validate_data):
         detail = DetailData(
@@ -65,8 +66,11 @@ class RepairPlanPostDataFromClientListSer(serializers.Serializer):
             # 删除已有的数据
             exists.delete()
         for i in validated_data['contents']:
-            assert isinstance(i, RepairPlanPostDataFromClientSingleContentSer)
-            i.save(department=validated_data['department'], date=validated_data['date'])
+            detail = RepairPlanPostDataFromClientSingleContentSer(data=i)
+            if detail.is_valid():
+                detail.save(
+                    department=validated_data['department'], date=validated_data['date'],
+                )
 
     def update(self, instance, validated_data):
         raise NotImplementedError("can't update data by serialization")
@@ -79,9 +83,11 @@ def post_detailed_data(request):
         department = UserDetailInfo.objects.get(user=request.user).department
     else:
         return Response(status=403)
-    data = RepairPlanPostDataFromClientListSer(data=request.data, many=True)
+    data = RepairPlanPostDataFromClientListSer(data=request.data.get('data'), many=True)
     if data.is_valid():
-        data.save()
+        data.save(
+            department=department,
+        )
         return Response(status=201)
     else:
         return Response(status=status.HTTP_400_BAD_REQUEST,
