@@ -123,3 +123,8 @@ def check_repair_date_conflict(request):
     return Response(data={
         'date_post': return_data
     })
+
+
+@api_view(["GET"])
+def get_detail_data(request):
+    print(request.content_params)
