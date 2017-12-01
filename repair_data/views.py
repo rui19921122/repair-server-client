@@ -1,5 +1,7 @@
 import datetime
+from collections import defaultdict
 
+import arrow
 from django.contrib.auth.models import User, AnonymousUser
 from rest_framework import serializers
 # Create your views here.
@@ -127,4 +129,14 @@ def check_repair_date_conflict(request):
 
 @api_view(["GET"])
 def get_detail_data(request):
-    print(request.content_params)
+    start = arrow.get(request.GET.get('start'), 'YYYYMMDD').date()
+    end = arrow.get(request.GET.get('end'), 'YYYYMMDD').date()
+    objects = DetailData.objects.filter(date__gte=start, date__lte=end)
+    print(objects.count())
+    data = defaultdict(lambda: [])
+    _list_data = []
+    for obj in objects:
+        data[arrow.get(obj.date).format('YYYY-MM-DD')].append(obj)
+    for i in data:
+        _list_data.append({'date': i, 'contents': data[i]})
+    return Response(data={'data': RepairPlanPostDataFromClientListSer(_list_data, many=True).data})
