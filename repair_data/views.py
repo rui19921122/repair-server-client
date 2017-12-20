@@ -46,12 +46,12 @@ class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
             plan_end_time=validate_data['plan_end_time'],
             actual_end_time=validate_data['actual_end_time'],
             manual=validate_data['manual'],
-            repair_type='',
             actual_start_number=validate_data['actual_start_number'],
             actual_end_number=validate_data['actual_end_number'],
             person=validate_data['person'],
         )
         detail.save()
+        print(detail.actual_end_time)
         return detail
 
 
@@ -132,7 +132,6 @@ def get_detail_data(request):
     start = arrow.get(request.GET.get('start'), 'YYYYMMDD').date()
     end = arrow.get(request.GET.get('end'), 'YYYYMMDD').date()
     objects = DetailData.objects.filter(date__gte=start, date__lte=end)
-    print(objects.count())
     data = defaultdict(lambda: [])
     _list_data = []
     for obj in objects:

@@ -139,8 +139,8 @@ LANGUAGE_CODE = 'zh-hans'
 USE_I18N = False
 
 USE_L10N = False
-
-USE_TZ = False
+TIME_ZONE = 'Asia/Shanghai'
+USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
