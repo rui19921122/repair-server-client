@@ -44,7 +44,6 @@ class TestScrapyPlan(APITestCase):
             self.assertEqual(response.data['length'], len(response.data['data']))
             for i in response.data['data']:
                 self.assertGreaterEqual(len(i['content']), 1)
-            print(response.data)
         else:
             return
 

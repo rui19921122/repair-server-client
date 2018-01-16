@@ -1,10 +1,9 @@
-from django.shortcuts import render
 import datetime
+
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 
-from config import is_in_rail_net
-from scrapy_func.get_history_list import get_repair_plan_list, generate_repair_plan_list
+from scrapy_func.get_history_list import get_repair_plan_list
 
 
 # Create your views here.
@@ -20,8 +19,5 @@ class ScrapyHistoryListView(generics.RetrieveAPIView):
             raise ValueError("提供的参数缺失")
         if end_date < start_date:
             raise ValueError("日期提供错误")
-        if is_in_rail_net:
-            data = get_repair_plan_list(start_date, end_date, username='whdz01',password='111111')
-        else:
-            data = generate_repair_plan_list(start_date, end_date)
+        data = get_repair_plan_list(start_date, end_date, username='whdz01', password='111111')
         return Response(data={'data': data})

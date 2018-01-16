@@ -1,19 +1,19 @@
+# django环境配置
+import os
+import re
+import sys
 import typing
+
+import bs4
+import django
 import requests
 from bs4 import BeautifulSoup
-import bs4
-import re
 
-# django环境配置
-import os, sys, django
+from scrapy_history_detail.models import PlanHistoryDetailCache
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'repair_statistics_server.settings'
 django.setup()
-
-from config import is_in_rail_net
-
-from mock_data.models import MockPlanHistoryList, MockPlanHistoryDetail
 
 url = 'http://10.128.20.119:8080/dzdxj/dzdxj/wxdxj/continueWxDxj.faces'
 re_find_publish_number_and_time_pattern = re.compile(r'\(1\).*?(\d{3,7}).*?(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})',
@@ -21,28 +21,10 @@ re_find_publish_number_and_time_pattern = re.compile(r'\(1\).*?(\d{3,7}).*?(\d{4
 re_find_actual_time_pattern = re.compile(r'\(2\).*?(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})-\d{4}-\d{2}-\d{2} \d{2}:\d{2}',
                                          re.M | re.DOTALL)
 
-
-def generate_repair_detail_by_inner_id(inner_id: str):
-    s = MockPlanHistoryDetail.objects.filter(inner_id=inner_id).first()
-    return {
-        "number": s.number,  # 施工维修编号，格式为[JDZ]\d{3}
-        "repair_content": s.repair_content,  # 施工项目
-        "effect_area": s.effect_area,  # 影响使用范围
-        "publish_start_time": s.publish_start_time,  # 命令号发布时间
-        "publish_start_number": s.publish_start_number,  # 开始施工命令号码
-        "actual_start_time": s.actual_start_time,  # 施工开始时间
-        "actual_end_time": s.actual_end_time,  # 命令号结束时间
-        "actual_end_number": s.actual_end_number,  # 开通施工命令号码
-        "actual_host_person": s.actual_host_person,  # 把关人
-    }
-
-
 from header import header
 
 
 def get_repair_detail_by_inner_id(inner_id: str):
-    if not is_in_rail_net:
-        return generate_repair_detail_by_inner_id(inner_id)
     detail_url = url + '?wxArg=' + inner_id
     response = requests.get(detail_url, headers=header)
     if response.status_code == 200:
@@ -50,7 +32,6 @@ def get_repair_detail_by_inner_id(inner_id: str):
     else:
         raise ConnectionError("连接失败，返回的状态码为" + response.status_code)
     soup = BeautifulSoup(response.text, 'lxml')
-    print(response.text)
     tr = soup.find('tbody', {'id': 'wx_ydjForm:table_data'}).find('tr')  # 存储详情的表格
     assert isinstance(tr, bs4.element.Tag)
     tds = tr.find_all('td')  # type:typing.List[bs4.element.Tag]
@@ -82,18 +63,22 @@ def get_repair_detail_by_inner_id(inner_id: str):
     except:
         raise ValueError("解析错误，{}".format(actual_end_text))
     actual_host_person = tds[9].get_text(strip=True)
-    MockPlanHistoryDetail.objects.create(
-        number=number,
-        repair_content=repair_content,
-        effect_area=effect_area,
-        publish_start_time=publish_start_time,
-        publish_start_number=publish_start_number,
-        actual_start_time=actual_start_time,
-        actual_end_time=actual_end_time,
-        actual_end_number=actual_end_number,
-        actual_host_person=actual_host_person,
-        inner_id=inner_id
-    )
+    # 将采集到的数据储存在数据库中，以减轻服务器压力
+    try:
+        PlanHistoryDetailCache.objects.create(
+            number=number,
+            repair_content=repair_content,
+            effect_area=effect_area,
+            publish_start_time=publish_start_time,
+            publish_start_number=publish_start_number,
+            actual_start_time=actual_start_time,
+            actual_end_time=actual_end_time,
+            actual_end_number=actual_end_number,
+            actual_host_person=actual_host_person,
+            inner_id=inner_id
+        )
+    except:
+        pass
 
     return {
         "number": number,  # 施工维修编号，格式为[JDZ]\d{3}
@@ -109,16 +94,4 @@ def get_repair_detail_by_inner_id(inner_id: str):
 
 
 if __name__ == '__main__':
-    detail_list = MockPlanHistoryList.objects.all()
-    for detail in detail_list:
-        if MockPlanHistoryDetail.objects.filter(inner_id=detail.inner_id).exists():
-            pass
-        else:
-            print(detail.inner_id)
-            try:
-                f = get_repair_detail_by_inner_id(detail.inner_id)
-                new = MockPlanHistoryDetail(**f, inner_id=detail.inner_id)
-                new.save()
-                print('ok')
-            except:
-                print('失败')
+    pass

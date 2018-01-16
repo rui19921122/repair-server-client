@@ -3,7 +3,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/mock-data/', include("mock_data.urls")),
     url(r'^api/scrapy/plan/', include("scrapy_plan.urls")),
     url(r'^api/scrapy/history-list/', include("scrapy_history_list.urls")),
     url(r'^api/scrapy/history-detail/', include("scrapy_history_detail.urls")),

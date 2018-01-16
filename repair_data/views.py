@@ -51,7 +51,6 @@ class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
             person=validate_data['person'],
         )
         detail.save()
-        print(detail.actual_end_time)
         return detail
 
 

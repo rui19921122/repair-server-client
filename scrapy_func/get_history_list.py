@@ -1,53 +1,19 @@
-import requests
 import datetime
-from bs4 import BeautifulSoup
-
-from config import is_in_rail_net
+import os
+import sys
 
 # django环境配置
-import os, sys, django
+import django
+import requests
+from bs4 import BeautifulSoup
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 os.environ['DJANGO_SETTINGS_MODULE'] = 'repair_statistics_server.settings'
 django.setup()
 
-from mock_data.models import MockPlanHistoryList
-
-
-def generate_repair_plan_list(start_date: datetime.date,
-                              end_date: datetime.date,
-                              session_id=None,
-                              username: str = '',
-                              password: str = ''):
-    _data = []
-    current_date = start_date
-    while current_date <= end_date:
-        _date_count = (start_date - datetime.date(2010, 1, 1)).days % 3
-        _filtered_data = MockPlanHistoryList.objects.filter(date_start=_date_count)
-        for single_data in _filtered_data:
-            _data.append(
-                {
-                    'plan_type': single_data.plan_type,
-                    'number': single_data.number,  # 天窗修编号
-                    'date': current_date.strftime('%Y%m%d'),  # 天窗修日期
-                    'plan_time': single_data.plan_time,  # 计划时间
-                    'repair_content': single_data.repair_content,
-                    'repair_department': single_data.repair_department,
-                    'apply_place': single_data.apply_place,
-                    'inner_id': single_data.inner_id,
-                    'use_paper': single_data.use_paper,
-                }
-            )
-        current_date += datetime.timedelta(days=1)
-    return _data
-
 
 def get_repair_plan_list(start_date: datetime.date, end_date: datetime.date, session_id=None, username='', password=''):
     # 如果配置文件为不在内网，则使用生成器返回
-    if is_in_rail_net:
-        pass
-    else:
-        return generate_repair_plan_list(start_date, end_date, session_id, username, password)
 
     if not session_id:
         if len(username) == 0 or len(password) == 0:
@@ -144,24 +110,6 @@ def get_repair_plan_list(start_date: datetime.date, end_date: datetime.date, ses
         )
     return return_data
 
-
-def generate_data(result: generate_repair_plan_list):
-    for i in result:
-        date = datetime.date(year=int(i['date'][:4]), month=int(i['date'][4:6]), day=int(i['date'][6:]))
-        start_date = (date - datetime.date(2010, 1, 1)).days % 3
-        new = MockPlanHistoryList(
-            date_start=start_date,
-            plan_type=i['plan_type'],
-            number=i['number'],
-            plan_time=i['plan_time'],
-            repair_content=i['repair_content'],
-            repair_department=i['repair_department'],
-            apply_place=i['apply_place'],
-            inner_id=i['inner_id'],
-            use_paper=i['use_paper']
-        )
-        new.save()
-        print('ok')
 
 
 if __name__ == '__main__':

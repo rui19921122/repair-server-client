@@ -49,7 +49,6 @@ def login_view(request):
     else:
         try:
             user = UserDetailInfo.objects.filter(username=request.data.get('username'))
-            print(request.data)
             if user.count() == 1:
                 user = user[0]
             elif user.count() == 0:

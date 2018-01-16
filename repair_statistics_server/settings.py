@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mock_data',
     'rest_framework',
     'rest_framework_docs',
     'department',
@@ -45,7 +44,8 @@ INSTALLED_APPS = [
     'web_config',
     'repair_data',
     'scrapy_plan',
-    'system_user'
+    'system_user',
+    'scrapy_history_detail',
 ]
 
 CORS_ORIGIN_WHITELIST = (
@@ -77,10 +77,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-if DEBUG:
-    MIDDLEWARE.append(
-        "middleware.AllRequestDelayThreeSeconds.AllRequestDelayThreeSeconds"
-    )
 
 ROOT_URLCONF = 'repair_statistics_server.urls'
 

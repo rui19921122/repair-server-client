@@ -80,4 +80,3 @@ def get_repair_plan_data_by_date(start: datetime.date, end: datetime.date):
 
 if __name__ == '__main__':
     f = get_repair_plan_data_by_date(datetime.date(2017, 6, 10), datetime.date(2017, 6, 12))
-    print(f)
