@@ -9,49 +9,14 @@ from rest_framework import status
 # Create your views here.
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework.validators import ValidationError
 
-from repair_data.models import DetailData
 from system_user.models import UserDetailInfo
+from .models import DetailData
 
 
-class RepairPlanPostDataFromClientSingleContentSer(serializers.Serializer):
-    number = serializers.CharField(required=True)
-    plan_start_time = serializers.DateTimeField(required=False, allow_null=True)
-    plan_end_time = serializers.DateTimeField(required=False, allow_null=True)
-    canceled = serializers.BooleanField(default=False)
-    manual = serializers.BooleanField(default=False)
-    actual_start_time = serializers.DateTimeField(required=False)
-    actual_end_time = serializers.DateTimeField(required=False)
-    actual_start_number = serializers.CharField(required=False)
-    actual_end_number = serializers.CharField(required=False)
-    person = serializers.CharField(required=False)
-
-    def validate(self, data):
-        if data['plan_end_time'] and data['plan_start_time']:
-            if data['plan_end_time'] < data['plan_start_time']:
-                raise ValidationError("计划结束时间不能早于开始时间")
-        if data['actual_end_time'] and data['actual_start_time']:
-            if data['actual_end_time'] < data['actual_start_time']:
-                raise ValidationError("实际结束时间不能早于开始时间")
-        return data
-
-    def create(self, validate_data):
-        detail = DetailData(
-            department=validate_data['department'],
-            date=validate_data['date'],
-            number=validate_data['number'],
-            plan_start_time=validate_data['plan_start_time'],
-            actual_start_time=validate_data['actual_start_time'],
-            plan_end_time=validate_data['plan_end_time'],
-            actual_end_time=validate_data['actual_end_time'],
-            manual=validate_data['manual'],
-            actual_start_number=validate_data['actual_start_number'],
-            actual_end_number=validate_data['actual_end_number'],
-            person=validate_data['person'],
-        )
-        detail.save()
-        return detail
+class RepairPlanPostDataFromClientSingleContentSer(serializers.ModelSerializer):
+    class Meta:
+        model = DetailData
 
 
 class RepairPlanPostDataFromClientListSer(serializers.Serializer):
