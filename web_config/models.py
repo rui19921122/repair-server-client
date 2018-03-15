@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class RepairCollectionsTableConfig(models.Model):
     config = models.CharField(max_length=10000)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
 
     def save(self, *args, **kwargs):
         # 每个人保存5条记录

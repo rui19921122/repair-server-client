@@ -17,7 +17,7 @@ def user_info_view(request):
     :return: 
     """
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         user = UserDetailInfo.objects.get(
             user=request.user
         )
@@ -41,7 +41,7 @@ def login_view(request):
     :return: 
     """
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         return Response(
             data={'error': '您已经登陆，请<a href="api/system_user/logout/">登出</a>后重试'},
             status=status.HTTP_400_BAD_REQUEST,

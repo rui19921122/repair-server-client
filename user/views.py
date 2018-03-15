@@ -15,7 +15,7 @@ def UserInfo(request):
     :return: 
     """
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         user = InnerUser.objects.get(
             user=request.user
         )
@@ -39,7 +39,7 @@ def Login(request):
     :return: 
     """
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         return Response(
             data={'error': '您已经登陆，请<a href="api/user/logout/">登出</a>后重试'},
             status=status.HTTP_400_BAD_REQUEST,

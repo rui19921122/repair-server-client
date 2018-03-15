@@ -5,6 +5,8 @@ from django.apps import apps
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your models here.
+from django.db.models import SET_NULL
+
 from department.models import Department
 import requests
 from header import header
@@ -14,7 +16,7 @@ import time
 
 class Session(models.Model):
     session = models.CharField(max_length=200, verbose_name='session值')
-    department = models.ForeignKey('department.Department')
+    department = models.ForeignKey('department.Department',on_delete=SET_NULL,null=True)
     retry_nums = models.PositiveSmallIntegerField(default=0)
     create_time = models.DateTimeField(auto_now_add=True)
 

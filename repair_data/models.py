@@ -16,5 +16,5 @@ class DetailData(models.Model):
     actual_end_number = models.IntegerField(null=True, blank=True, verbose_name='实际结束编号')
     person = models.CharField(max_length=50, blank=True, null=True, verbose_name='把关人')
     date = models.DateField(verbose_name='日期')
-    department = models.ForeignKey('department.Department', verbose_name='部门')
+    department = models.ForeignKey('department.Department', verbose_name='部门',on_delete=models.SET_NULL,null=True)
     note = models.CharField(max_length=50, verbose_name='备注', default='')

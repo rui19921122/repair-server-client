@@ -9,5 +9,4 @@ urlpatterns = [
     url(r'^api/system-user/', include("system_user.urls")),
     url(r'^api/config/', include("web_config.urls")),
     url(r'^api/data/', include("repair_data.urls")),
-    url(r'^api/', include("rest_framework_docs.urls")),
 ]

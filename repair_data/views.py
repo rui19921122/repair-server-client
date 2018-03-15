@@ -45,7 +45,7 @@ class RepairPlanPostDataFromClientListSer(serializers.Serializer):
 @api_view(["POST"])
 def post_detailed_data(request):
     assert isinstance(request.user, User) or isinstance(request.user, AnonymousUser)
-    if request.user.is_authenticated():
+    if request.user.is_authenticated:
         department = UserDetailInfo.objects.get(user=request.user).department
     else:
         return Response(status=403)
